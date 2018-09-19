@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>胖胖网上订餐</title>
+    <link rel="shortcut icon" href="images/小图标12.jpg"  />
+    <link rel="stylesheet" href="网上订餐.css" />
+</head>
+<body>
+    <div id="header">
+        <img src="images/小图标12.jpg" id="img1" title="胖胖网上订餐" />
+        <a id="a_1" href="" title="胖胖网上订餐">胖胖网上订餐</a>
+        <p id="p_1">WANGSHANGDINGCAN</p>
+        <div class="right">
+            <input type="text" placeholder="搜索你喜欢的菜名、甜点、饮料" class="inp_1" />
+            <a href="" class="a_i">搜索</a>
+            <a href="javascript:void(0)" class="dl" id="wydl">登录</a>
+
+            <div id="Login" style="display: none">
+                <span class="xdl">登录</span>
+                <span id="close">X</span>
+                <div class="form">
+                    <form action="" name="myform">
+                        <p>用户名:<input type="text" id="username" name="username" /></p>
+                        <p>密&nbsp;&nbsp;&nbsp;码:<input type="password" id="pwd" name="pwd" /></p>
+                        <p>验证码:<input type="text" name="valcode" id="valcode" /></p>
+                        <img src="http://218.196.14.220:8080/res/verifyCodeServlet" id="codeimg" alt="看不清，点击切换"/>
+                    </form>
+                </div>
+                <p id="word">登录</p>
+            </div>
+
+            <div class="button">
+                <span id="showuser" style="display:none"></span>
+            </div>
+            <div id="hidebg" style="display: none"></div>
+        </div>
+    </div>
+    <div id="nav">
+        <a href="#ts" class="ts">特色菜品</a>
+        <a href="#rx" class="rx">今日热销</a>
+        <a href="#qb" class="qb">全部菜品</a>
+        <a href="#jl" class="jl">历史记录</a>
+    </div>
+    <div id="content">
+        <div class="maintype">
+            <a href="" name="ts" class="p_sp"><span class="sp_1">1</span>特色菜品</a>
+            <div class="scroll_mid">
+                <img src="images/pic_1.jpg" id="pic" />
+                <ul id="scroll_number">
+                    <li onMouseOver="show(1)" onMouseOut="start()" class="scroll_number_over"></li>
+                    <li onMouseOver="show(2)" onMouseOut="start()"></li>
+                    <li onMouseOver="show(3)" onMouseOut="start()"></li>
+                    <li onMouseOver="show(4)" onMouseOut="start()"></li>
+                    <li onMouseOver="show(5)" onMouseOut="start()"></li>
+                    <li onMouseOver="show(6)" onMouseOut="start()"></li>
+                    <li onMouseOver="show(7)" onMouseOut="start()"></li>
+                    <li onMouseOver="show(8)" onMouseOut="start()"></li>
+                    <li onMouseOver="show(9)" onMouseOut="start()"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="jrrx">
+            <a href="" name="rx" class="p_sp"><span class="sp_1">2</span>今日热销</a>
+            <div class="bj"></div>
+            <div class="hot">HOT</div>
+            <div class="rxp1 dcf">
+                <img src="images/rx.jpg" /><span class="rxsp">蛋炒饭</span>
+            </div>
+            <div class="rxp1">
+                <img src="images/rx.jpg" /><span class="rxsp">炖鸡</span>
+            </div>
+            <div class="rxp1">
+                <img src="images/rx.jpg" /><span class="rxsp">卤粉</span>
+            </div>
+            <div class="rxp1">
+                <img src="images/rx.jpg" /><span class="rxsp">素炒莴笋丝</span>
+            </div>
+            <div class="rxp1">
+                <img src="images/rx.jpg" /><span class="rxsp">手撕包菜</span>
+            </div>
+        </div>
+        <div class="menu">
+            <a href="" name="qb" class="p_sp"><span class="sp_1">3</span>全部菜品</a>
+            <div id="show">
+                <div class="menuPic" id="f0">
+                    <img src="" alt="" class="foodPic">
+                    <span class="foodid"></span>
+                </div>
+                <div class="menuPic" id="f1">
+                    <img src="" alt="" class="foodPic">
+                    <span class="foodid"></span>
+                </div>
+                <div class="menuPic" id="f2">
+                <img src="" alt="" class="foodPic">
+                <span class="foodid"></span>
+                </div>
+                <div class="menuPic" id="f3">
+                <img src="" alt="" class="foodPic">
+                <span class="foodid"></span>
+                </div>
+                <div class="menuPic" id="f4">
+                <img src="" alt="" class="foodPic">
+                <span class="foodid"></span>
+                </div>
+                <div class="menuPic" id="f5">
+                <img src="" alt="" class="foodPic">
+                <span class="foodid"></span>
+                </div>
+                <div class="menuPic" id="f6">
+                <img src="" alt="" class="foodPic">
+                <span class="foodid"></span>
+                </div>
+                <div class="menuPic" id="f7">
+                <img src="" alt="" class="foodPic">
+                <span class="foodid"></span>
+                </div>
+                <div class="menuPic" id="f8">
+                <img src="" alt="" class="foodPic">
+                <span class="foodid"></span>
+                </div>
+                <div class="menuPic" id="f9">
+                <img src="" alt="" class="foodPic">
+                <span class="foodid"></span>
+                </div>
+                <div class="menuPic" id="f10">
+                <img src="" alt="" class="foodPic">
+                <span class="foodid"></span>
+                </div>
+                <div class="menuPic" id="f11">
+                    <img src="" alt="" class="foodPic">
+                    <span class="foodid"></span>
+                </div>
+                <div class="menuPic" id="f12">
+                    <img src="" alt="" class="foodPic">
+                    <span class="foodid"></span>
+                </div>
+            </div>
+            <div id="bgleft" style="display: none"></div>
+            <div id="cdxq" style="display:none">
+                <p><span id="details">菜单详情</span><span id="x">X</span></p>
+                <div id="foodimg">
+                    <div id="foods"></div>
+                </div>
+                <span id="dishes"></span>
+                <span id="normal"></span>
+                <span id="real"></span>
+                <span id="buyfood">立即购买</span>
+            </div>
+            <div id="car"></div>
+            <span id="foodnum" style="display: none"></span>
+
+        </div>
+        <div class="lsjl">
+            <a href="" name="jl" class="p_sp"><span class="sp_1">4</span>历史记录</a>
+            <div class="bj"></div>
+            <div class="his">History</div>
+            <div class="jlp1 abc">
+                <img src="images/jl.jpg" /><span class="jlsp">蛋炒饭</span>
+            </div>
+            <div class="jlp1">
+                <img src="images/jl.jpg" /><span class="jlsp">炒鸡</span>
+            </div>
+            <div class="jlp1">
+                <img src="images/jl.jpg" /><span class="jlsp">西红柿蛋汤</span>
+            </div>
+            <div class="jlp1">
+                <img src="images/jl.jpg" /><span class="jlsp">酸辣鱼</span>
+            </div>
+            <div class="jlp1">
+                <img src="images/jl.jpg" /><span class="jlsp">卤粉</span>
+            </div>
+        </div>
+        <div id="sc" style="display: none"></div>
+        <div id="shopcar" style="display: none">
+            <p id="food" style="display: none"><img src="" />&nbsp;&nbsp;</p>
+            <span id="allprice" style="display: none"></span>
+            <span id="addnum" style="display: none"></span>
+            <span id="reducenum" style="display: none"></span>
+            <span id="num" style="display: none"></span>
+            <span id="order">确定下单</span>
+        </div>
+        <div id="Login_1" style="display: none">
+            <span class="psxx">配送信息</span>
+            <span id="close_x">X</span>
+            <form action="" name="myform1">
+                <p>送货地址:<input type="text" id="address" name="address" /></p>
+                <p>联系方式:<input type="password" id="tel" name="tel" /></p>
+                <p>送货时间:<input type="text" name="deliverytime" id="deliverytime" /></p>
+                <p>附&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;言:<input type="text" name="ps" id="ps" /></p>
+            </form>
+            <p id="word_1">确认</p>
+        </div>
+    </div>
+
+
+    <script>
+        var index=1;
+        var time;
+        var pic=document.getElementById("pic");
+
+
+        time=setInterval("show()",1000);
+
+        function show(id) {
+            if( Number(id) ){
+                index=id;
+                clearInterval(time);
+            }else{
+                index++;
+                if(index==10){
+                    index=1;
+                }
+            }
+
+            pic.src="images/pic_"+index+".jpg";
+
+            var lis=document.getElementsByTagName("li");
+            for(var i=0;i<lis.length;i++){
+                lis[i].setAttribute("class","scroll_number_out");
+                if( i==(index-1) ){
+                    lis[i].setAttribute("class","scroll_number_over");
+                }
+            }
+        }
+        function start() {
+            time=setInterval("show()",1000);
+        }
+
+
+
+        var foods;    //全局变量
+        var fid;
+
+        //兼容浏览器
+        function getXhr() {
+            var xhr;
+            if( window.ActiveXObject ){
+                xhr=new ActiveXObject("Microsoft.XMLHTTP");
+            }else{
+                xhr=new XMLHttpRequest();
+            }
+            return xhr;
+        }
+
+        //封装一个函数
+        function $(id) {
+            return document.getElementById(id);
+        }
+
+        //可以发送ajax请求了
+        getAllFoods();
+
+
+        //给12个菜名添加事件
+        addEventToDiv();
+
+
+        //查看购物车
+        shop();
+
+
+        //验证码
+        $("codeimg").onclick=function () {
+            $("codeimg").src="http://218.196.14.220:8080/res/verifyCodeServlet?a="+Math.random();
+        }
+
+
+        //购物车的点击事件
+        $("car").onclick=function () {
+            //购物车里面有订单
+            if( document.querySelectorAll("#shopcar div").length>0 ){
+                //如果是隐藏的，点一次显示
+                if( $("shopcar").style.display=="none" || $("shopcar").style.display=="" ){
+                    $("shopcar").style.display="block"
+                    $("sc").style.top="1430px";
+                    $("sc").style.display="block";
+                    //如果是显示的，点一次隐藏
+                }else{
+                    $("shopcar").style.display="none";
+                    $("sc").style.display="none";
+                }
+            }else{
+                $("shopcar").style.display="none";
+                $("sc").style.display="none";
+                alert("您的购物车空空如也，先去逛逛呗~");
+            }
+        }
+
+
+        //购物车里面的加减
+        function addnum(id) {
+            var xhr=getXhr();
+            xhr.open("POST","http://218.196.14.220:8080/res/resorder.action",false);
+            //设置ajax跨域请求，带cookieid的参数
+            xhr.withCredentials=true;
+            //如果用post请求方式，必须添加一个请求头
+            xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+            xhr.send("op=orderJson&num=1&fid="+id);
+
+            var str=xhr.responseText;
+            //console.log(str);
+            shop();
+        }
+        function reducenum(id,num) {
+            var xhr=getXhr();
+            xhr.open("POST","http://218.196.14.220:8080/res/resorder.action",false);
+            //设置ajax跨域请求，带cookieid的参数
+            xhr.withCredentials=true;
+            //如果用post请求方式，必须添加一个请求头
+            xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+            //减分两种情况  （1）减数量  （2）当数量是1时，删除这个订单
+            if(num==1){
+                xhr.send("op=delorder&fid="+id);
+            }else{
+                xhr.send("op=orderJson&num=-1&fid="+id);
+            }
+            shop();
+        }
+
+
+        //下订单
+        function orderclick() {
+            $("order").onclick=function () {
+                var xhr=getXhr();
+                xhr.open("POST","http://218.196.14.220:8080/res/resuser.action",false);
+                xhr.withCredentials=true;
+                //如果用post请求方式，必须添加一个请求头
+                xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+                xhr.send("op=checkLogin");
+
+                var str=xhr.responseText;
+
+                //将json字符串，转为json对象
+                var json=eval( "(" +str+ ")" );console.log(json.code);
+
+
+                //如果没有登录，则显示登录框；如果登录了，则显示订单框
+                //注意：session在关闭浏览器，或半小时之内，是不会消失的  有缓存
+                if(json.code==1){
+                    $("hidebg").style.display="block";
+                    $("Login_1").style.display="block";
+                }else{
+                    $("Login").style.top="1500px";
+                    $("hidebg").style.top="1400px";
+                    $("hidebg").style.display="block";
+                    $("Login").style.display="block";
+                }
+            }
+        }
+        orderclick();
+
+
+        //确认购买
+        $("word_1").onclick=function () {
+            //先获取值
+            var address=$("address").value;
+            var tel=$("tel").value;
+            var deliverytime=$("deliverytime").value;
+            var ps=$("ps").value;
+
+            var xhr=getXhr();
+            xhr.open("POST","http://218.196.14.220:8080/res/cust/custOp.action",false);
+            xhr.withCredentials=true;
+            //如果用post请求方式，必须添加一个请求头
+            xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+            xhr.send("op=confirmOrder&address="+address+"&tel="+tel+"&deliverytime="+deliverytime+"&ps="+ps);
+
+            var str=xhr.responseText;
+
+            //将json字符串，转为json对象
+            var json=eval( "(" +str+ ")" );
+
+            if(json.code==1){
+                alert("购买成功，请耐心等待送达");
+                $("hidebg").style.display="none";
+                $("Login_1").style.display="none";
+                $("sc").style.display="none";
+                $("shopcar").style.display="none";
+                $("foodnum").style.display="none";
+                $("foodnum").innerHTML=0;
+                $("shopcar").innerHTML="<span id='order'>确定下单</span>";
+            }else{
+                console.log(json.msg);
+            }
+        }
+        $("close_x").onclick=function () {
+            $("hidebg").style.display="none";
+            $("Login_1").style.display="none";
+        }
+
+        //登录与退出
+        $("wydl").onclick=function () {
+            $("hidebg").style.display="block";
+            $("Login").style.display="block";
+        }
+        $("close").onclick=function () {
+            $("hidebg").style.display="none";
+            $("Login").style.display="none";
+        }
+        $("word").onclick=function () {
+            var xhr=getXhr();
+            xhr.open("POST","http://218.196.14.220:8080/res/resuser.action",false);
+			xhr.withCredentials=true;
+            //如果用post请求方式，必须添加一个请求头
+            xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+            //取值
+            var username=$("username").value;
+            var pwd=$("pwd").value;
+            var valcode=$("valcode").value;
+            xhr.send("op=login&username="+username+"&pwd="+pwd+"&valcode="+valcode);
+
+            var str=xhr.responseText;
+
+            //将json字符串，转为json对象
+            var json=eval( "(" +str+ ")" );
+
+            if(json.code==1){
+                $("hidebg").style.display="none";
+                $("Login").style.display="none";
+                //用户显示
+                $("showuser").style.display="block";
+                $("showuser").innerHTML="欢迎"+username+"，<a id='exit'>退出</a>";
+                //登录按钮隐藏
+                $("wydl").style.display="none";
+
+                //退出一定放在登录里面，因为exit刚开始是没有这个id的
+                $("exit").onclick=function () {
+                    var xhr=getXhr();
+                    xhr.open("POST","http://218.196.14.220:8080/res/resuser.action",false);
+                    //如果用post请求方式，必须添加一个请求头
+                    xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+                    xhr.send("op=logout");
+
+                    var str=xhr.responseText;
+
+                    //将json字符串，转为json对象
+                    var json=eval( "(" +str+ ")" );
+
+                    if(json.code==1){
+                        alert("退出成功");
+                    }else{
+                        alert("退出失败");
+                    }
+                    $("showuser").style.display="none";
+                    $("showuser").innerHTML="";
+                    $("wydl").style.display="inline-block";
+                }
+            }else{
+                alert("登录失败，请稍后重试");
+            }
+        }
+
+
+        //购买
+        $("buyfood").onclick=function () {
+            var xhr=getXhr();
+            xhr.open("POST","http://218.196.14.220:8080/res/resorder.action",false);
+            //设置ajax跨域请求，带cookieid的参数     写在open后面
+            xhr.withCredentials=true;
+            //如果用post请求方式，必须添加一个请求头
+            xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+            xhr.send("num=1&op=order&fid="+fid);
+
+            var str=xhr.responseText;
+
+            //将json字符串，转为json对象
+            var json=eval( "(" +str+ ")" );
+
+            if(json.code==1){
+                //下单成功
+                $("bgleft").style.display="none";
+                $("cdxq").style.display="none";
+                //下单成功之后，这个菜应该放在购物车里面
+                shop();
+            }else{
+                alert("网络连接失败，请稍后重试");
+            }
+        }
+
+        //查看当前购物车
+        function shop() {
+            $("shopcar").innerHTML='<span id="order">确定下单</span>';
+            var xhr=getXhr();
+            xhr.open("POST","http://218.196.14.220:8080/res/resorder.action",false);
+            //设置ajax跨域请求，带cookieid的参数
+            xhr.withCredentials=true;
+            //如果用post请求方式，必须添加一个请求头
+            xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+            xhr.send("op=getCartInfo");
+
+            var str=xhr.responseText;
+            //console.log(str);
+
+            //将json字符串，转为json对象
+            var json=eval( "(" +str+ ")" );
+
+            if(json.code==1){
+                //用来计数
+                var count=0;
+                for( var x in json.obj ){
+                    //双重验证  不加也没有问题
+                    if( json.obj.hasOwnProperty(x) ){   //判断对象里面是否有该属性
+                        count++;
+                    }
+                }
+                //console.log(count);
+                if(count>0){
+                    //购物车有东西，则显示
+                    $("foodnum").innerHTML=count;
+                    $("foodnum").style.display="block";
+                    for( var x in json.obj ){
+                        if( json.obj.hasOwnProperty(x) ){
+                            //js是弱类型的脚本语言，因此，类型可以任意转换  json->数组   数组->json
+                            var myjson=json.obj[x];     //json.obj.x  x是一个变量
+                            var str='<div><p id="food">';
+                            str+='<img width="30px" height="30px" src="http://218.196.14.220:8080/res/images/'+myjson.food.fphoto+'">';
+                            str+='&nbsp;&nbsp;'+myjson.food.fname;
+                            str+='</p><span><span id="allprice">小计：'+myjson.smallCount+'</span></span>';
+                            str+='<span id="addnum" onclick="addnum('+myjson.food.fid+')"></span><span><span id="num">'+myjson.num+'</span></span>';
+                            str+='<span id="reducenum" onclick="reducenum('+myjson.food.fid+','+myjson.num+')"></span></div>';
+                            //字符串已经拼接完毕
+                            $("shopcar").innerHTML=str+$("shopcar").innerHTML;
+                            orderclick();
+                        }
+                    }
+                }else{
+                    //购物车没东西，则隐藏
+                    $("foodnum").innerHTML=0;
+                    $("foodnum").style.display="none";
+                }
+            }
+        }
+
+        //获取所有的菜品，显示到网页上
+        function getAllFoods() {
+            var xhr=getXhr();
+            xhr.open("POST","http://218.196.14.220:8080/res/resfood.action",false);
+            //如果用post请求方式，必须添加一个请求头
+            xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+            xhr.send("op=findAllFoods");
+
+            var str=xhr.responseText;
+
+            //将json字符串，转为json对象
+            var json=eval( "(" +str+ ")" );
+
+            if(json.code==1){    //判断结果
+                foods=json.obj;    //获取所有的数据，拼接成网页的形式放上去
+
+                var str='';    //循环数组，用于拼接的字符串
+                for(var i=0;i<foods.length;i++){
+                    str+='<div width="520px" height="80px" class="menuPic" id="f'+i+'">';
+                    str+='<img width="150px" height="120px"  class="foodPic" src="http://218.196.14.220:8080/res/images/'+foods[i].fphoto+'" />';
+                    str+='<span class="foodid">'+foods[i].fname+'</span>';
+                    str+='</div>';
+                }
+                document.getElementById("show").innerHTML=str;
+            }else if(json.code==0){
+                alert("网络连接失败，请稍后重试");
+            }
+        }
+
+
+        //给12个菜名添加事件
+        function addEventToDiv() {
+            //先获取我们要点击的div
+            var divs=document.querySelectorAll("#show div");
+            for(var i=0;i<divs.length;i++){
+                //循环   建议：最好用ES6的let   但我们这里不行，所以用匿名函数自调用
+                (function (index) {
+                    divs[index].onclick=function () {
+                        //显示层
+                        $("bgleft").style.display="block";
+                        $("cdxq").style.display="block";
+                        //显示值
+                        $("foods").innerHTML='<img width="142px" height="95px"  id="s'+foods[index].fid+'" src="http://218.196.14.220:8080/res/images/'+foods[index].fphoto+'" />';
+                        $("dishes").innerHTML="菜名："+foods[index].fname;
+                        $("normal").innerHTML="标准价："+foods[index].normprice;
+                        $("real").innerHTML="惊爆价："+foods[index].realprice;
+                        fid=foods[index].fid;
+                    }
+                })(i)
+            }
+            //当我们点击x时，把层隐藏
+            $("x").onclick=function () {
+                $("bgleft").style.display="none";
+                $("cdxq").style.display="none";
+            }
+        }
+
+
+
+    </script>
+</body>
+</html>
